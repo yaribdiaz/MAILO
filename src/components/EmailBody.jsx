@@ -5,7 +5,7 @@ const EmailBody = ({htmlDecode}) => {
 
     const {dataMail} = useEmail()
     console.log(dataMail)
-    const {subject, date, from} = dataMail
+    // const {subject, date, from} = dataMail
     const renderHTML = (rawHTML) => React.createElement ("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
 
   return (

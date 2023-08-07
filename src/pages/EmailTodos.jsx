@@ -1,7 +1,7 @@
-import { useEffect, Suspense, useState } from "react"
-import Filter from "../components/Filter"
+import { useEffect} from "react"
 import { useEmail } from "../context/EmailProvider"
 import Mensajes from "../components/Mensajes"
+import Filter from "../components/Filter"
 
 
 const EmailTodos = () => {
@@ -13,29 +13,11 @@ useEffect(() => {
 },[])
   
 return (
-  <> 
-
-        <div>
-      
-              <Filter/>
-
-
-          <div className="mt-7 ">
-            <div className="bg-white text-sm h-screen overflow-y-scroll">
-              <Mensajes/>
-            <div className="h-48">
-              
-            </div>
-            </div>
-
-            
-        
-            </div>
-      
-
-
-        </div>
-
+  <>      
+    <Filter/>
+    <div className="mt-5 bg-white text-sm h-full overflow-hidden overflow-y-scroll">
+      <Mensajes/>
+    </div>
   </>
 )
 }
