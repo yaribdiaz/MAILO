@@ -9,7 +9,7 @@ const EmailBody = ({htmlDecode}) => {
     const renderHTML = (rawHTML) => React.createElement ("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
 
   return (
-    <div className="p-5">
+    <div className="">
         <div className=" p-5">
           {/* <p className="text-black text-2xl">{subject[0]?.value}</p> */}
         </div>
@@ -19,7 +19,7 @@ const EmailBody = ({htmlDecode}) => {
         </div>
 
         <div className="flex justify-center ">
-            <div className="p-3 flex-1">
+            <div className="flex-1">
                 {renderHTML(htmlDecode)}
             </div>
         </div>

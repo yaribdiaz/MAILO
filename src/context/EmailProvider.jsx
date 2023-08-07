@@ -1,15 +1,9 @@
 import { useContext, createContext, useState, useEffect} from "react";
-import { useAuth } from "./AuthProvider";
 import { axiosInterceptor, gmailInterceptor } from "../config/clienteAxios";
-import { trySampleRequest } from "../utils/oauthSignIn";
 import { decode as base64_decode } from "base-64";
 import DOMPurify from 'dompurify';
 
 import axios from "axios";
-import { formatearFecha } from "../utils";
-
-
-
 
 const EmailContext = createContext()
 
@@ -64,6 +58,10 @@ const EmailProvider = ({children}) => {
                 },
                 params: {
                     q: 'is:inbox', // Filtrar por mensajes en inbox
+                    //q:'is:unread'
+                    //q: 'is:inbox'
+                    //q: 'is:read'
+                    // q: 'subject:vacante'
                   }
             })
             //console.log('messagesId',messagesId)

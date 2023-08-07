@@ -27,7 +27,7 @@ const Email = () => {
           <MailBar/>
         </div>
 
-        <div className="mt-2 h-full overflow-y-scroll">
+        <div className=" h-full overflow-y-scroll">
           {/* {cargandoContenido ? 'cargando' :( */}
             <div className="text-sm ">
             
