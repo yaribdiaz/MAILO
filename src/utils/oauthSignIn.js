@@ -56,7 +56,7 @@ var fragmentString = location.hash.substring(1);
 
     // Parameters to pass to OAuth 2.0 endpoint.
     var params = {'client_id': '678979901209-v7dav4f46hd9rlmv865fokc08lmvf2fr.apps.googleusercontent.com',
-                  'redirect_uri': 'http://localhost:5173/mailo',
+                  'redirect_uri': 'https://mailo.netlify.app/',
                   'scope': 'https://mail.google.com/',
                   'scope': 'https://www.googleapis.com/auth/userinfo.profile',
                   'scope': 'https://accounts.google.com/',
