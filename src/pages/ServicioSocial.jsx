@@ -1,10 +1,16 @@
-import React from 'react'
+import Filter from '../components/Filter'
+import MailListBar from '../components/MailListBar'
+import Mensajes from '../components/Mensajes'
 
 const ServicioSocial = () => {
   return (
-    <div>
-      Servicio Social
+    <>      
+    <Filter/>
+    <MailListBar/>
+    <div className="mt-1 bg-white text-sm h-full overflow-hidden overflow-y-scroll">
+      <Mensajes/>
     </div>
+  </>
   )
 }
 

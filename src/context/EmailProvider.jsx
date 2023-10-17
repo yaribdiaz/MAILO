@@ -24,47 +24,33 @@ const EmailProvider = ({children}) => {
 
 
 
-    useEffect(()=>{
-         getProfile()
-    },[])
-
 
     const emailCategoria = categoria => {
         setEmailOpcion(categoria)
     }
 
     
-    const getProfile = async () => {
-        try {
-            //console.log('token',token)
-            const {data} = await axiosInterceptor(`/oauth2/v1/userinfo?access_token=${token.access_token}`)
-            setPerfil(data)
-            setCargando(false)
-        } catch (error) {
-            console.log('error getProfile')
-        }
-    }      
+   
         
     const getEmails = async () => {
 
         try {
             const {data} = await axiosInterceptor(`/oauth2/v1/userinfo?access_token=${token.access_token}`)
             //console.log('perfilGetMails', data)
-            //console.log(token)
             const {data:messagesId} = await gmailInterceptor(`/gmail/v1/users/${data?.id}/messages?maxResults=50`, {
                 headers: {
                     Authorization: `Bearer ${token?.access_token}`,
                     Accept: 'application/json'
                 },
                 params: {
-                    q: 'is:inbox', // Filtrar por mensajes en inbox
-                    //q:'is:unread'
+                    //q: 'is:read subject:servicio'
+                    //q:'subject:servicio social'
                     //q: 'is:inbox'
                     //q: 'is:read'
                     // q: 'subject:vacante'
                   }
             })
-            //console.log('messagesId',messagesId)
+            
             setMensajesId(messagesId.messages)
             
 
@@ -75,7 +61,7 @@ const EmailProvider = ({children}) => {
                 }
             }) ))
             .then((preview) => setMensajesPreview(preview));
-
+                                                       
               setCargandoContenido(false)
               //console.log('mensajes preview',mensajesPreview)
             } catch (error) {

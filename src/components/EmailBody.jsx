@@ -1,10 +1,10 @@
 import React from "react";
-import { useEmail } from "../context/EmailProvider";
+//import { useEmail } from "../context/EmailProvider";
 
 const EmailBody = ({htmlDecode}) => {
 
-    const {dataMail} = useEmail()
-    console.log(dataMail)
+    // const {dataMail} = useEmail()
+    // console.log(dataMail)
     // const {subject, date, from} = dataMail
     const renderHTML = (rawHTML) => React.createElement ("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
 
@@ -18,7 +18,7 @@ const EmailBody = ({htmlDecode}) => {
           <p>{date[0]?.value}</p> */}
         </div>
 
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
             <div className="flex-1">
                 {renderHTML(htmlDecode)}
             </div>

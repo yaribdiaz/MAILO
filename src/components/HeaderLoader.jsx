@@ -1,5 +1,3 @@
-import React from 'react'
-
 const HeaderLoader = () => {
   return (
     <div className=' flex items-center flex-row  rounded-xl animate-pulse'>             

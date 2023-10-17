@@ -9,7 +9,7 @@ const AuthContext = createContext()
 const AuthProvider = ({children}) => {
 
     const [auth, setAuth] = useState({})
-    const [cargando, setCargando] = useState(false)
+
 
     useEffect(() => {
 
@@ -23,7 +23,6 @@ const AuthProvider = ({children}) => {
         <AuthContext.Provider
             value={{
                 auth,
-                cargando,
                 setAuth
             }}
         >

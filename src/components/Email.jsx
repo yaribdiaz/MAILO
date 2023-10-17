@@ -29,8 +29,7 @@ const Email = () => {
 
         <div className=" h-full overflow-y-scroll">
           {/* {cargandoContenido ? 'cargando' :( */}
-            <div className="text-sm ">
-            
+            <div className="text-sm">
               <EmailBody htmlDecode={htmlDecode}/>
             </div> 
           {/* )} */}
